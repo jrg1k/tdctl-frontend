@@ -23,6 +23,7 @@ import { PrivateRoute, AuthorizationRoute, AdminRoute } from 'routes';
 import Navbar from 'components/molecules/navbar/Navbar';
 import ToastProvider from 'contexts/toastProvider';
 
+
 const App: React.FC = () => {
   return (
     <Router>

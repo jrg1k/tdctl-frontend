@@ -1,4 +1,5 @@
 import AuthenticateProvider from 'contexts/authProvider';
+import AnalyticsProvider from 'contexts/analyticsProvider';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
@@ -9,7 +10,9 @@ import './styles/styles.scss';
 ReactDOM.render(
   <React.StrictMode>
     <AuthenticateProvider>
-      <App />
+      <AnalyticsProvider>
+        <App />
+      </AnalyticsProvider>
     </AuthenticateProvider>
   </React.StrictMode>,
   document.getElementById('root')
