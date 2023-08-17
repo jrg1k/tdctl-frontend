@@ -21,8 +21,8 @@ const AuthNavbar = () => {
     try {
       await logout();
       updateCredentials();
-    } catch (errro) {
-      if (errro.statusCode === 401) {
+    } catch (error) {
+      if (error.statusCode === 401) {
         /* Gracefully ignore it */
       }
     }
@@ -34,11 +34,11 @@ const AuthNavbar = () => {
       <MenuItem label={'Profil'} path={'/profile'} />
       <MenuItem label={'Arrangement oversikt'} path={'/eventoverview'} />
       <MenuItem label={'Stillingsutlysninger'} path={'/jobs'} />
-
       {role === Roles.admin && (
         <MenuItem label={'Opprett Arrangement'} path={'/create-event'} />
       )}
       {role === Roles.admin && <MenuItem label={'Admin'} path={'/admin'} />}
+      {role === Roles.admin && <MenuItem label={'Stats'} path={'/stats'} />}
       <MenuItem label={'Logg ut'} path={'/'} onClick={onLogout} />
     </Menu>
   );

@@ -13,6 +13,7 @@ import ConfirmationPage from './confirmation/ConfirmationPage';
 import RestorePasswordPage from './restorePassword/RestorePassword';
 import ResetPasswordPage from './resetPassword/ResetPassword';
 import AboutTD from './aboutTD/AboutTD';
+import StatsPage from './stats/StatsPage';
 
 import Jobs from './jobs/Jobs';
 import Job from './jobs/Job';
@@ -34,4 +35,5 @@ export {
   Jobs,
   Job,
   AboutTD,
+  StatsPage,
 };

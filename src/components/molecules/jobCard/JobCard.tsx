@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 
 const JobCard: React.FC<JobItem> = (job) => {
-  const imgUrl = baseUrl + 'jobs/' + job.id + '/image';
+  const imgUrl = baseUrl + 'job/' + job.id + '/image';
 
   return (
     <div className={styles.job_card}>
@@ -61,7 +61,7 @@ const JobCard: React.FC<JobItem> = (job) => {
             );
           })}
         </div>
-        <Link to={'/jobs/' + job.id} style={{ textDecoration: 'none' }}>
+        <Link to={'/job/' + job.id} style={{ textDecoration: 'none' }}>
           <div className={styles.icon} id="icon">
             Les mer
             <Icon type={'arrow-right'} size={1} color="#f09667" />

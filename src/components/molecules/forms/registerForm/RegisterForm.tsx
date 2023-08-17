@@ -57,7 +57,6 @@ const RegisterForm = () => {
         graduated: graduated,
         phone: fields['phone'].value,
       });
-      console.log(validationCode);
     } catch (error) {
       switch (error.statusCode) {
         case 400:

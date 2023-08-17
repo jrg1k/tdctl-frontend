@@ -140,3 +140,12 @@ export interface TokenInfo {
 }
 
 export type CreateJob = Omit<JobItem, 'id'>;
+
+export interface IPageVisit {
+  page: string;
+}
+
+export interface IVisits {
+  count: number;
+  date: Date;
+}

@@ -39,7 +39,7 @@ const ValidJobLayout: React.FC<{ jobData: JobItem }> = ({ jobData }) => {
   const { id } = useParams<{ id: string }>();
   const { role } = useContext(AuthenticateContext);
   const history = useHistory();
-  const imgUrl = baseUrl + 'jobs/' + jobData?.id + '/image';
+  const imgUrl = baseUrl + 'job/' + jobData?.id + '/image';
 
   const { isOpen, onOpen, onClose } = useModal();
 
@@ -53,7 +53,8 @@ const ValidJobLayout: React.FC<{ jobData: JobItem }> = ({ jobData }) => {
                 <div
                   style={{
                     marginBottom: '2rem',
-                  }}>
+                  }}
+                >
                   <Icon
                     type="arrow-left"
                     size={2}
@@ -64,7 +65,8 @@ const ValidJobLayout: React.FC<{ jobData: JobItem }> = ({ jobData }) => {
                         return;
                       }
                       history.goBack();
-                    }}></Icon>
+                    }}
+                  ></Icon>
                 </div>
               )}
               <div className={'logoWrapper'}>
@@ -150,7 +152,8 @@ const ValidJobLayout: React.FC<{ jobData: JobItem }> = ({ jobData }) => {
       <Modal
         title={'Delete ' + String(jobData?.title)}
         isOpen={isOpen}
-        onClose={onClose}>
+        onClose={onClose}
+      >
         <div className={'deleteModal'}>
           <h5>Er du sikker på at du vil slette utlysningen?</h5>
           <Button
@@ -162,7 +165,8 @@ const ValidJobLayout: React.FC<{ jobData: JobItem }> = ({ jobData }) => {
                 title: 'Job: ' + jobData?.id + ' deleted',
                 status: 'success',
               });
-            }}>
+            }}
+          >
             Slett
           </Button>
 
